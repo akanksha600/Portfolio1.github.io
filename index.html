@@ -1,0 +1,296 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akanksha Omane | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- RGB Ambient Light Layer -->
+<div class="rgb-ambient"></div>
+<div class="rgb-orb orb1"></div>
+<div class="rgb-orb orb2"></div>
+<div class="rgb-orb orb3"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">AO</div>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-link active" onclick="showPage('home')">Home</a></li>
+    <li><a href="#about" class="nav-link" onclick="showPage('about')">About</a></li>
+    <li><a href="#achievements" class="nav-link" onclick="showPage('achievements')">Achievements</a></li>
+    <li><a href="#projects" class="nav-link" onclick="showPage('projects')">Projects</a></li>
+    <li><a href="#gallery" class="nav-link" onclick="showPage('gallery')">Gallery</a></li>
+    <li><a href="#contact" class="nav-link" onclick="showPage('contact')">Contact</a></li>
+  </ul>
+  <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">🌙</button>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- PAGE: HOME -->
+<section class="page active" id="home">
+  <div class="home-container">
+    <div class="home-text">
+      <p class="greeting">Hello, I'm</p>
+      <h1 class="name-title">Akanksha<br/><span class="accent-name">Omane</span></h1>
+      <p class="sub-title">Student | Aspiring Tech Professional</p>
+      <p class="university">🎓 MIT World Peace University (MIT-WPU), Pune</p>
+      <div class="cta-group">
+        <button class="btn-primary" onclick="showPage('about')">Know More</button>
+        <button class="btn-outline" onclick="showPage('contact')">Contact Me</button>
+      </div>
+      <div class="social-row">
+        <a href="#" class="social-icon" title="LinkedIn">in</a>
+        <a href="#" class="social-icon" title="GitHub">GH</a>
+        <a href="#" class="social-icon" title="Email">✉</a>
+      </div>
+    </div>
+    <div class="home-photo-wrap">
+      <div class="rgb-ring"></div>
+      <div class="photo-frame">
+        <!-- Replace src with your actual photo path after deploying -->
+        <img src="assets/photo.jpg" alt="Akanksha Omane" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="photo-placeholder">AO</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ scroll</div>
+</section>
+
+<!-- PAGE: ABOUT -->
+<section class="page" id="about">
+  <div class="page-inner">
+    <h2 class="section-title">About <span class="accent">Me</span></h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="card-icon">🎓</div>
+        <h3>Education</h3>
+        <p>Pursuing studies at <strong>MIT World Peace University (MIT-WPU), Pune</strong>. Passionate about technology, design, and innovation.</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">💡</div>
+        <h3>Interests</h3>
+        <p>AI & Machine Learning, Web Development, Design Thinking, Problem Solving, and Creative Technology.</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">🎯</div>
+        <h3>Goals</h3>
+        <p>To become a skilled tech professional who creates meaningful impact through smart, human-centered solutions.</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">💪</div>
+        <h3>Strengths</h3>
+        <p>Quick learner, team player, creative thinker, and dedicated problem solver with an eye for detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE: ACHIEVEMENTS -->
+<section class="page" id="achievements">
+  <div class="page-inner">
+    <h2 class="section-title">Achieve<span class="accent">ments</span></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">AI4A</span>
+          <h3>AI for All Project</h3>
+          <p>Completed the AI4A project with hands-on implementation of AI concepts and real-world problem solving.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">Design Thinking</span>
+          <h3>Design Thinking Project</h3>
+          <p>Participated in a design thinking challenge, developing innovative solutions using human-centered design principles.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">ACE</span>
+          <h3>ACE Project</h3>
+          <p>Successfully completed the ACE project demonstrating academic and creative excellence.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">Coursera</span>
+          <h3>Coursera Certification</h3>
+          <p>Earned industry-recognized certification through Coursera, enhancing professional skills.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">NetAcad</span>
+          <h3>Cisco NetAcad Certificate</h3>
+          <p>Completed Cisco Networking Academy course and earned certification in networking fundamentals.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-tag">Yuva AI</span>
+          <h3>Yuva AI Certification</h3>
+          <p>Completed Yuva AI program, gaining foundational knowledge in artificial intelligence and its applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE: PROJECTS -->
+<section class="page" id="projects">
+  <div class="page-inner">
+    <h2 class="section-title">My <span class="accent">Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="proj-img-box">🤖</div>
+        <div class="proj-info">
+          <span class="proj-tag">AI</span>
+          <h3>AI4A Project</h3>
+          <p>An AI-powered solution built as part of the AI for All program, focusing on real-world problem statements.</p>
+          <a href="#" class="proj-link">View Project →</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-img-box">🧠</div>
+        <div class="proj-info">
+          <span class="proj-tag">Design</span>
+          <h3>Design Thinking Project</h3>
+          <p>A human-centered design project that went through empathize, define, ideate, prototype, and test phases.</p>
+          <a href="#" class="proj-link">View Project →</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-img-box">🏆</div>
+        <div class="proj-info">
+          <span class="proj-tag">ACE</span>
+          <h3>ACE Project</h3>
+          <p>Academic and creative project showcasing research skills, innovation, and technical proficiency.</p>
+          <a href="#" class="proj-link">View Project →</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-img-box">🌐</div>
+        <div class="proj-info">
+          <span class="proj-tag">Web</span>
+          <h3>Digital Portfolio</h3>
+          <p>This very portfolio — built with HTML, CSS, and JavaScript, deployed on GitHub Pages.</p>
+          <a href="#" class="proj-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE: GALLERY -->
+<section class="page" id="gallery">
+  <div class="page-inner">
+    <h2 class="section-title">My <span class="accent">Gallery</span></h2>
+    <p class="gallery-desc">A showcase of my photographs, certificates, and moments.</p>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">📜<br/>Certificate 1</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">🏅<br/>Award 1</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">📷<br/>Event Photo</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">📜<br/>Coursera Cert</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">🌐<br/>NetAcad Cert</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <div class="gallery-placeholder">🤖<br/>Yuva AI Cert</div>
+      </div>
+    </div>
+  </div>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content">
+      <span class="lb-close">✕</span>
+      <div id="lbInner"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE: CONTACT -->
+<section class="page" id="contact">
+  <div class="page-inner">
+    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="ci-icon">✉</span>
+          <div>
+            <p class="ci-label">Email</p>
+            <p class="ci-value">akanksha.omane@mitwpu.edu.in</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">📞</span>
+          <div>
+            <p class="ci-label">Phone</p>
+            <p class="ci-value">+91 XXXXXXXXXX</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">🎓</span>
+          <div>
+            <p class="ci-label">University</p>
+            <p class="ci-value">MIT World Peace University, Pune</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">💼</span>
+          <div>
+            <p class="ci-label">LinkedIn</p>
+            <p class="ci-value">linkedin.com/in/akanksha-omane</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">🐙</span>
+          <div>
+            <p class="ci-label">GitHub</p>
+            <p class="ci-value">github.com/akanksha-omane</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" class="form-input" required/>
+        <input type="email" placeholder="Your Email" class="form-input" required/>
+        <textarea placeholder="Your Message" class="form-input form-textarea" rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Send Message 🚀</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a onclick="showPage('home'); toggleMenu()">Home</a></li>
+    <li><a onclick="showPage('about'); toggleMenu()">About</a></li>
+    <li><a onclick="showPage('achievements'); toggleMenu()">Achievements</a></li>
+    <li><a onclick="showPage('projects'); toggleMenu()">Projects</a></li>
+    <li><a onclick="showPage('gallery'); toggleMenu()">Gallery</a></li>
+    <li><a onclick="showPage('contact'); toggleMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+                          </html>
