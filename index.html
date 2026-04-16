@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -37,21 +37,20 @@ DOCTYPE html>
       <p class="greeting">Hello, I'm</p>
       <h1 class="name-title">Akanksha<br/><span class="accent-name">Omane</span></h1>
       <p class="sub-title">Student | Aspiring Tech Professional</p>
-      <p class="university">🎓 MIT Vishwaprayag university (MIT-VPU), solapur</p>
+      <p class="university">🎓 MIT Vishwaprayag University (MIT-VPU), Solapur</p>
       <div class="cta-group">
         <button class="btn-primary" onclick="showPage('about')">Know More</button>
         <button class="btn-outline" onclick="showPage('contact')">Contact Me</button>
       </div>
       <div class="social-row">
-        <a href="#" class="social-icon" title="LinkedIn">in</a>
-        <a href="#" class="social-icon" title="GitHub">GH</a>
-        <a href="#" class="social-icon" title="Email">✉</a>
+        <a href="https://linkedin.com/in/akanksha-omane" target="_blank" class="social-icon" title="LinkedIn">in</a>
+        <a href="https://github.com/akanksha-omane" target="_blank" class="social-icon" title="GitHub">GH</a>
+        <a href="mailto:akanksha.omane@mitvpu.edu.in" class="social-icon" title="Email">✉</a>
       </div>
     </div>
     <div class="home-photo-wrap">
       <div class="rgb-ring"></div>
       <div class="photo-frame">
-        <!-- Replace src with your actual photo path after deploying -->
         <img src="assets/photo.jpg" alt="Akanksha Omane" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
         <div class="photo-placeholder">AO</div>
       </div>
@@ -68,7 +67,7 @@ DOCTYPE html>
       <div class="about-card">
         <div class="card-icon">🎓</div>
         <h3>Education</h3>
-        <p>Pursuing studies at <strong>MIT vishwaprayag university (MIT-VPU), solapur</strong>. Passionate about technology, design, and innovation.</p>
+        <p>Pursuing studies at <strong>MIT Vishwaprayag University (MIT-VPU), Solapur</strong>. Passionate about technology, design, and innovation.</p>
       </div>
       <div class="about-card">
         <div class="card-icon">💡</div>
@@ -197,26 +196,52 @@ DOCTYPE html>
     <h2 class="section-title">My <span class="accent">Gallery</span></h2>
     <p class="gallery-desc">A showcase of my photographs, certificates, and moments.</p>
     <div class="gallery-grid" id="galleryGrid">
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">📜<br/>Certificate 1</div>
+        <img src="assets/cert1.jpg" alt="Certificate 1" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">📜<br/>Certificate 1</div>
+        <div class="gallery-label">Certificate 1</div>
       </div>
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">🏅<br/>Award 1</div>
+        <img src="assets/cert2.jpg" alt="Award 1" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">🏅<br/>Award 1</div>
+        <div class="gallery-label">Award 1</div>
       </div>
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">📷<br/>Event Photo</div>
+        <img src="assets/event.jpg" alt="Event Photo" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">📷<br/>Event Photo</div>
+        <div class="gallery-label">Event Photo</div>
       </div>
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">📜<br/>Coursera Cert</div>
+        <img src="assets/coursera.jpg" alt="Coursera Certificate" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">📜<br/>Coursera Cert</div>
+        <div class="gallery-label">Coursera Certificate</div>
       </div>
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">🌐<br/>NetAcad Cert</div>
+        <img src="assets/netacad.jpg" alt="NetAcad Certificate" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">🌐<br/>NetAcad Cert</div>
+        <div class="gallery-label">Cisco NetAcad Certificate</div>
       </div>
+
       <div class="gallery-item" onclick="openLightbox(this)">
-        <div class="gallery-placeholder">🤖<br/>Yuva AI Cert</div>
+        <img src="assets/yuvaai.jpg" alt="Yuva AI Certificate" class="gallery-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <div class="gallery-placeholder" style="display:none">🤖<br/>Yuva AI Cert</div>
+        <div class="gallery-label">Yuva AI Certificate</div>
       </div>
+
     </div>
   </div>
+
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <div class="lightbox-content">
@@ -250,7 +275,7 @@ DOCTYPE html>
           <span class="ci-icon">🎓</span>
           <div>
             <p class="ci-label">University</p>
-            <p class="ci-value">MIT Vishwaprayag University, solapur</p>
+            <p class="ci-value">MIT Vishwaprayag University, Solapur</p>
           </div>
         </div>
         <div class="contact-item">
@@ -292,5 +317,74 @@ DOCTYPE html>
 </div>
 
 <script src="script.js"></script>
+
+<!-- Updated openLightbox script -->
+<script>
+  function openLightbox(el) {
+    const img = el.querySelector('img');
+    const placeholder = el.querySelector('.gallery-placeholder');
+    const lb = document.getElementById('lightbox');
+    const inner = document.getElementById('lbInner');
+
+    if (img && img.style.display !== 'none') {
+      inner.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="max-width:90vw; max-height:80vh; border-radius:12px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);"/>`;
+    } else {
+      inner.innerHTML = `<div style="font-size:4rem; text-align:center;">${placeholder.innerHTML}</div>`;
+    }
+
+    lb.classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+</script>
+
+<!-- Gallery image CSS injected inline for convenience -->
+<style>
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+  }
+
+  .gallery-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 0 0 12px 12px;
+    backdrop-filter: blur(4px);
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .lightbox.active {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
 </body>
-                          </html>
+</html>
+       
+
+
